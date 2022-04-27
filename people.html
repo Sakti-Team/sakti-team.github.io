@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sakti Team</title>
+
+        <meta charset = "utf-8">
+		<link rel = "shortcut icon" type = "image/x-icon" href="Logo.ico" />
+
+		<meta name = "author" content = "Sakti Team" />
+		<meta name = "description" content = "Sakti Team" />
+		<meta name = "keywords" content = "hacks, games, sakti, team, kanjut, puki, meki" />
+
+		<meta property = "og:title" content = "Sakti Team" />
+		<meta property = "og:description" content = "Official website for Sakti Team" />
+		<meta property = "og:type" content = "website" />
+		<meta property = "og:url" content = "https://saktiteam.ga" />
+		<meta property = "og:secure_url" content = "https://saktiteam.ga">
+		<meta property = "og:image" content = "https://saktiteam.ga/Logo.ico" />
+
+        <style>
+            body {
+				background-color: rgb(25, 25, 25);
+                color: white;
+                font-family: "Trebuchet MS";
+			}
+
+            body::-webkit-scrollbar {
+                width: 12px;
+            }
+      
+            body::-webkit-scrollbar-thumb {
+                background-color: rgb(80, 80, 80);
+            }
+
+            #people {
+                background-color: rgb(25, 25, 25); 
+                color: rgb(255, 255, 255);
+                border: 0px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h4 id="people"></h20>
+            <br>
+            <br>
+        </center>
+
+        <script type="text/javascript">
+            const Box = document.getElementById("people");
+
+            const people = new XMLHttpRequest();
+            const peopleURL = "https://sakti-team.github.io/people.txt";
+            people.open("GET", peopleURL, true);
+            people.send();
+
+            people.onreadystatechange = () => {
+                Box.innerText = people.responseText;
+            }
+        </script>
+    </body>
+</html>
